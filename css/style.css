@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park:300,400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: .04286rem;
+  color: white;
+  background-color: #e0e0e0;
+}
+
+h1, h2, h3 {
+  margin: 1em 1rem;
+}
+
+article .title {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  padding-top: 1em;
+  padding-bottom: 0.6em;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  margin: auto;
+  max-width: 1000px;
+}
+
+.inner-header {
+  position: relative;
+  padding-top: 100px;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.present {
+  position: absolute;
+  width: 230px;
+  height: 180px;
+  left: 720px;
+  top: 160px;
+  background-image: url("../img/present-3.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-name: resize;
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.10);
+  }
+  90% {
+    transform: scale(1.10);
+  }
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-left: 50px;
+  color: #373737;
+  font-weight: lighter;
+}
+
+header h2 {
+  font-size: 1rem;
+}
+
+header h3, header h2, header h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+  position: relative;
+  height: 12rem;
+  width: 12rem;
+}
+
+.photo {
+  border-radius: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.hat {
+  z-index: 1000;
+  position: absolute;
+  top: -90px;
+  left: -85px;
+  height: 330px;
+  width: 250px;
+  background-image: url("../img/santas-hat-6.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.swing {
+  transform-origin: 250px 300px;
+  animation-name: swing;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+main > section {
+  width: 50%;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.right {
+  padding-top: 130px;
+}
+
+.icon {
+  font-size: 2rem;
+  margin-right: 0.1em;
+}
+
+article {
+  background-color: white;
+  min-height: 100px;
+  margin-bottom: 20px;
+  color: #373737;
+  padding: 10px 0 30px;
+}
+
+p {
+  line-height: 1.9em;
+  font-size: 0.9rem;
+}
+
+.introduction {
+  background-color: #e0e0e0;
+  text-align: justify;
+}
+
+.stretched {
+  width: 100%;
+  max-width: 600px;
+}
+
+.text {
+  width: auto;
+}
+
+.text div {
+  text-align: center;
+}
+
+#carousel {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 10vh;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+#carousel .content {
+  background-color: pink;
+  width: 100%;
+  height: 80vh;
+  max-width: 1000px;
+  margin: auto;
+}
+#images {
+  height: 100%;
+  background-color: #ffc58b;
+}
+
+.img-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  background-color: #0b0b0b;
+}
+
+.img-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: fill;
+  transition: opacity 800ms;
+}
+
+#i-container {
+  height: inherit;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.slide-intro {
+  position: absolute;
+  top: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  background-color: gainsboro;
+  width: 80%;
+  height: 80%;
+  z-index: 2000;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.slide-intro p {
+  font-size: 0.9rem;
+  color: #0b0b0b;
+  margin: 5px;
+}
+.slide-intro button {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  /* ... */
+}
+
+#carousel .control-bar {
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  background-color: grey;
+  opacity: 50%;
+}
+
+#carousel .btn {
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 3.6rem;
+  text-transform: uppercase;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+footer {
+  height: 14em;
+  background-color: #d50961;
+
+}
+
+.center {
+  text-align: center;
+}
+
+.title-1, .title-2, .title-3, .sig {
+  padding-top: 1em;
+  padding-bottom: 0.6em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.title-1 {
+  font-family: 'Kulim Park', sans-serif;
+  font-size: 2.5rem;
+  padding-bottom: 1.4em;
+}
+
+.sig {
+  font-family: 'Rock Salt', cursive;
+  font-size: 1.6rem;
+}
+
+.title-2 {
+  font-family: 'Kulim Park', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.title-3 {
+  font-family: 'Kulim Park', sans-serif;
+  font-size: 1.2rem;
+}
+
+.project {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  height: 2rem;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #373737;
+}
+
+a:hover {
+  color: burlywood;
+}
+
+.project a{
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: burlywood;
+}
+
+.project:hover {
+  color: burlywood;
+  cursor: pointer;
+}
+
+.icon {
+  color: #3033ba;
+}
+
+.contact-items {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+/*----------------------------------------------------------------------------------------------------------------
+    FOOTER
+-----------------------------------------------------------------------------------------------------------------*/
+.footer-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+}
+
+/*----------------------------------------------------------------------------------------------------------------
+    MEDIA: SMALL SCREEN and TABLET
+-----------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1100px) {
+  .logo {
+    transform: scale(0.7);
+  }
+
+  .present {
+    height: 140px;
+    left: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    transform: scale(0.7);
+  }
+
+  .present {
+    height: 130px;
+    left: 60%;
+    transform: scale(0.4);
+  }
+
+  .welcome h1 {
+    font-size: 1.5rem;
+    margin-left: 60px;
+  }
+
+  .welcome p {
+    display: none;
+    font-size: 0.8rem;
+  }
+
+  #carousel .btn {
+    font-size: 1.2rem;
+  }
+}
+
+/*----------------------------------------------------------------------------------------------------------------
+    MEDIA: MOBILE
+-----------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  .logo {
+    transform: scale(0.7);
+  }
+  #carousel .content {
+  height: 70vh;
+  }
+  .hat {
+    height: 105px;
+    width: 140px;
+    top: -65px;
+    left: -50px;
+  }
+
+  #abba.present {
+    height: 120px;
+    width: 110px;
+    left: 60%;
+
+  }
+
+  .welcome h1 {
+    font-size: 1.5rem;
+    margin-left: auto;
+  }
+
+  .welcome p {
+    display: none;
+    font-size: 0.4rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+  }
+
+  section.left {
+    width: 100%;
+  }
+
+  section.right {
+    width: 100%;
+  }
+  #carousel .btn {
+    font-size: 0.8rem;
+  }
+
+  .slide-intro h2 {
+    display: none;
+  }
+  /* check display compact*/
+  .slide-intro p {
+    font-size: 0.7rem;
+    color: #0b0b0b;
+    margin:0;
+    display: compact;
+  }
+  .slide-intro button {
+    font-size: 0.8rem;
+    padding-top: 10px;
+    color: #d50961;
+  }
+}
+
+
+
+@media (max-width: 320px) {
+  .content {
+    min-width: 320px;
+  }
+
+  .sig {
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+
+
+  h1, h2, h3 {
+    font-size: 16px;
+    margin: 0.5em 0.5rem;
+  }
+
+  .inner-header{
+    padding-top: 50px;
+  }
+
+  #carousel .btn {
+    font-size: 0.6rem;
+  }
+}
