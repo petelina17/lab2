@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!--  <div class="screen">-->
 
   <div id="wrapper">
     <header>
@@ -25,10 +24,7 @@
           <p style="color: black;padding-left: 200px; ">Says anyone</p>
         </div>
 
-        <div class="present" id="abba">
-          <!--          <p style="margin-left: 100px; margin-top: 150px;-->
-          <!--            color: white; font-family: sans-serif, cursive; font-weight: bold;">-->
-          <!--            ClicK!</p>-->
+        <div class="present" id="abba" style="cursor: pointer">
           <audio id="abbaAudio">
             <source src="audio/Happy%20New%20Year%20-%20Abba.mp3"
                     type="audio/mpeg"/>
@@ -36,7 +32,6 @@
         </div>
       </div>
     </header>
-
 
 
     <main class="content">
@@ -71,20 +66,15 @@
       </section>
 
 
-
       <section class="right">
-
-
-
         <article class="text">
           <div class="title-2">
-            <!--            <i class="fas fa-newspaper icon"></i>-->
             My projects
           </div>
-          <div class="project">COPY PAGE</div>
-          <div class="project">MEDIA</div>
-          <div class="project">REDESIGN OLD SITE</div>
-          <div class="project">TEXT GAME</div>
+          <div class="project"><a href="img/google.png">COPY GOOGLE PAGE/ Group work</a></div>
+          <div class="project"><a href="img/original_home.jpg"> REDESIGN/ OLD SITE VIEW</a></div>
+          <div class="project"><a href="img/new_home.jpg"> REDESIGN/ NEW SITE VIEW</a></div>
+          <div class="project"><a href="https://github.com/petelina17/lab1"> TEXT GAME</a></div>
 
         </article>
 
@@ -93,40 +83,55 @@
             <div>My hobbies</div>
           </div>
 
-          <div class="project" onclick="slide()">
-            Slide show
+          <div class="project" onclick="slide()" style="cursor: pointer">
+            <span class="project:hover">Slide show</span>
           </div>
 
           <i style="color: #d50961; margin-top:20px" class="fab fa-pinterest icon"></i>
           <span style="font-size: 1rem">
-            <a href="https://www.pinterest.se/petelina17"
-               style="cursor: pointer; text-decoration: none; color: #373737">
+            <a href="https://www.pinterest.se/petelina17">
               find more here...
             </a>
           </span>
         </article>
         <article class="gallery">
           <div class="title-2">
-            say what you think
+            what you think?
             <div class="contact-items">
-              <i class="far fa-envelope icon"></i>
-              <i class="fab fa-linkedin icon"></i>
-              <i class="fab fa-skype icon"></i>
-              <!--            <i class="fas fa-comments icon"></i>-->
-
+              <a href="mailto:petelina17@gmail.com" style="cursor: pointer; text-decoration: none"> <i
+                  class="far fa-envelope icon"></i></a>
+              <a href=" https://www.linkedin.com/in/natalia-petelina-7958999b"
+                 style="cursor: pointer; text-decoration: none"><i class="fab fa-linkedin icon"></i></a>
+              <a href="skype:<tyzenok>?<action>"><i class="fab fa-skype icon"></i></a>
             </div>
           </div>
-
         </article>
       </section>
-
 
       <div id="carousel">
         <div class="content">
           <div id="images">
             <div class="img-container">
               <div id="i-container">
-
+                <div id="slide-intro" class="slide-intro">
+                  <h3>
+                    Some Intro...
+                  </h3>
+                  <p>
+                  <p>For my crafts I prefer to use natural materials, old cardboard boxes,
+                    wrapping paper, old newspapers and magazines and so on.</p>
+                  <p>I like the idea that some items can be made literally from garbage,
+                    but they look amazing after all either some items can be turned into
+                    completely different things in the most unexpected way...</p>
+                  <p>What you think about the stylish table lamp made from a flower vase
+                    or the picture drawn with cosmetic pencils, lipstick and nail polish?</p>
+                  <p>May be you'll like cardboard coffee table? Please, take a look on things
+                    I'm passionate about.</p>
+                  <p>I believe that our imagination is capable of a lot, to be more attentive
+                    to the world around that's all is needed.</p>
+                  </p>
+                  <div class="btn" onclick="closeSlideIntro()">close</div>
+                </div>
               </div>
               <div class="control-bar">
                 <div class="btn" onclick="backSlide()">back</div>
@@ -146,7 +151,6 @@
         <p>&nbsp;&nbsp;&copy 2019-2021 by Natalia Petelina</p>
       </div>
       <picture>
-        <!--          <source srcset="img/christmas-card-574742_1280.jpg" media="(max-width:650px)">-->
         <img class="footer-img" src="img/christmas-card-574742_1920.jpg" alt="Christmas lights">
       </picture>
     </footer>
