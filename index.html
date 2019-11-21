@@ -16,18 +16,28 @@
     <header>
       <div class="content inner-header">
         <div class="logo">
-          <div class="hat swing">&nbsp;
-          </div>
-          <img src="img/PhotoLab_5.jpg" alt="my-face">
+          <div class="hat swing">&nbsp;</div>
+          <img src="img/PhotoLab_5.jpg" alt="my-face" class="photo"/>
         </div>
         <div class="welcome">
-          <h1 style="color: deeppink">We all have dreams.
+          <h1 style="color: deeppink">We all have dreams
           </h1>
           <p style="color: black;padding-left: 200px; ">Says anyone</p>
         </div>
-        <div class="present">&nbsp;</div>
+
+        <div class="present" id="abba">
+          <!--          <p style="margin-left: 100px; margin-top: 150px;-->
+          <!--            color: white; font-family: sans-serif, cursive; font-weight: bold;">-->
+          <!--            ClicK!</p>-->
+          <audio id="abbaAudio">
+            <source src="audio/Happy%20New%20Year%20-%20Abba.mp3"
+                    type="audio/mpeg"/>
+          </audio>
+        </div>
       </div>
     </header>
+
+
 
     <main class="content">
       <section class="left">
@@ -43,15 +53,13 @@
             are still my favourite weekend activities.
             Nevertheless, during last few decades I managed to live in different cities,
             visit many interesting countries, meet a lot of (wonderful) people and to learn several languages;
-            I was performing design work in AutoCad, selling equipment for restaurants
+            I was performing some technological design in AutoCAD, was selling equipment for restaurants
             and purchasing equipment for subway, was working as a personal assistant,
-            volunteered at a children's hockey school, pursued a career in
+            volunteered at a children's hockey school, made a career in
             transportation and logistics in order to, as it turned out, quit it all up and move
-            to another country, where start all over again... with a new passion for web developing
-            and open heart for the new life opportunities.
-
-            <!--          in its current interpretation, which aims to a clear and easy understandable presentation-->
-            <!--            of the information and not overloaded user interface.-->
+            to another country, where start all over again... with a new passion for web development
+            and my eyes wide open for the new professional opportunities.
+          </p>
 
           <div class="title-3 center">With best wishes for a brilliant Christmas,</div>
 
@@ -62,39 +70,44 @@
         </article>
       </section>
 
+
+
       <section class="right">
+
+
+
         <article class="text">
           <div class="title-2">
             <!--            <i class="fas fa-newspaper icon"></i>-->
             My projects
           </div>
-          <div>Word Press</div>
-          <div>Copy Page</div>
-          <div>Media</div>
-          <div>Redesign old site</div>
-          <div>Copy Page II</div>
-          <div>Text game</div>
-          <!--
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                      exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat n
-                      ulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                      qui officia deserunt mollit anim id est laborum.</p>
-                    -->
+          <div class="project">COPY PAGE</div>
+          <div class="project">MEDIA</div>
+          <div class="project">REDESIGN OLD SITE</div>
+          <div class="project">TEXT GAME</div>
+
         </article>
 
-        <article class="sound">
+        <article>
           <div class="title-2">
-            <!--            <i style="color: #d50961" class="fas fa-images icon"></i>-->
-            My hobbies<br>
-            <i style="color: #d50961; margin-top:20px" class="fab fa-pinterest icon"></i>
-            <span style="font-size: small">find more here...</span>
+            <div>My hobbies</div>
           </div>
+
+          <div class="project" onclick="slide()">
+            Slide show
+          </div>
+
+          <i style="color: #d50961; margin-top:20px" class="fab fa-pinterest icon"></i>
+          <span style="font-size: 1rem">
+            <a href="https://www.pinterest.se/petelina17"
+               style="cursor: pointer; text-decoration: none; color: #373737">
+              find more here...
+            </a>
+          </span>
         </article>
         <article class="gallery">
           <div class="title-2">
-            say what you think...
+            say what you think
             <div class="contact-items">
               <i class="far fa-envelope icon"></i>
               <i class="fab fa-linkedin icon"></i>
@@ -108,20 +121,37 @@
       </section>
 
 
-    </main>
+      <div id="carousel">
+        <div class="content">
+          <div id="images">
+            <div class="img-container">
+              <div id="i-container">
 
-    <!--  </div>-->
-    <footer>
-      <p>&copy; 2021 by Natalia Petelina</p>
-      <p>&nbsp;actual date here</p>
-      <div class="content">
-        <picture>
-          <!--          <source srcset="img/christmas-card-574742_1280.jpg" media="(max-width:650px)">-->
-          <img src="img/christmas-card-574742_1920.jpg" alt="Christmas lights">
-        </picture>
+              </div>
+              <div class="control-bar">
+                <div class="btn" onclick="backSlide()">back</div>
+                <div class="btn" onclick="slideShowClose()">close</div>
+                <div class="btn" onclick="nextSlide()">next</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+
+    </main>
+    <footer>
+
+      <div class="content">
+        <p>&nbsp;&nbsp;&copy 2019-2021 by Natalia Petelina</p>
+      </div>
+      <picture>
+        <!--          <source srcset="img/christmas-card-574742_1280.jpg" media="(max-width:650px)">-->
+        <img class="footer-img" src="img/christmas-card-574742_1920.jpg" alt="Christmas lights">
+      </picture>
     </footer>
     <script src="script.js"></script>
+    <script src="slider.js"></script>
   </div>
 </body>
 </html>
