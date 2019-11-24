@@ -423,10 +423,18 @@ a:hover {
   }
   .hat {
     height: 105px;
-    width: 140px;
-    top: -65px;
-    left: -50px;
+    width: 153px;
+    top: -57px;
+    left: -35px;
   }
+  .swing {
+    transform-origin: 100px 100px;
+  }
+  @keyframes swing {
+    0% { transform: rotate(0deg) }
+    50% { transform: rotate(10deg)}
+  }
+
 
   #abba.present {
     height: 120px;
